@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+</head>
+<body>
+	<h1>Test Notification</h1>
+	<button type="button" name="button" onclick="doNotify()">Notify me!</button>
+	<script type="text/javascript">
+		function doNotify(){
+			Notification.requestPermission().then(function (result){
+				var myNotification = new Notification('The guy that sent me the message...', {
+					'body': 'Test Notification',
+				});
+			});
+		}
+	</script>
+</body>
+</html>
